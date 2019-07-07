@@ -1,5 +1,5 @@
 module.exports = {
-    publicPath: process.env.NODE_ENV === 'production'
-        ? '/alterlog.io'
+    baseUrl: process.env.NODE_ENV === 'production'
+        ? '/alterlog.io/'
         : '/'
 }
