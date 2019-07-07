@@ -8,18 +8,18 @@
     </v-toolbar>
 
     <v-content>
-      <HelloWorld/>
+      <LogList/>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import LogList from './components/LogList'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    LogList
   },
   data () {
     return {
