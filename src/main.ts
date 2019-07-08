@@ -11,7 +11,7 @@ Vue.config.productionTip = false;
 Vue.use(Vuetify, {
   theme: {
     primary: colors.lightGreen.darken3,
-    secondary: colors.amber.darken4
+    secondary: colors.lightBlue.lighten1
   }
 })
 

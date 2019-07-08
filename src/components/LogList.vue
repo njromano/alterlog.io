@@ -17,7 +17,7 @@
                   dark/>
               </div>
               <div>
-                <v-btn color="secondary" @click="onSaveBtn">
+                <v-btn color="secondary black--text" @click="onSaveBtn">
                   SAVE
                 </v-btn>
                 <v-btn color="white" @click="showNewCard = false">
