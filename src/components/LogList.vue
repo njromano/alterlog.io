@@ -20,7 +20,7 @@
                 <v-btn color="secondary" @click="onSaveBtn">
                   SAVE
                 </v-btn>
-                <v-btn color="white" @click="onSaveBtn">
+                <v-btn color="white" @click="showNewCard = false">
                   CANCEL
                 </v-btn>
               </div>
