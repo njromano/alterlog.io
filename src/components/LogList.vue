@@ -39,7 +39,7 @@
           </v-card-text>
           <v-card-actions>
             <v-layout justify-end>
-              <v-icon small @click.stop="confirmDeleteIndex = index; confirmDelete = true">delete</v-icon>
+              <v-icon small @click.stop="confirmDeleteIndex = index;">delete</v-icon>
             </v-layout>
           </v-card-actions>
         </v-card>
@@ -104,14 +104,15 @@
       this.showNewCard = true;
     }
 
-    get showConfirmDeleteDialog(): boolean {
-      return this.confirmDeleteIndex > -1;
-    }
-
     @Watch("confirmDelete")
     onConfirmDeleteChange(val: boolean) {
       if (!val)
         this.confirmDeleteIndex = -1;
+    }
+
+    @Watch("confirmDeleteIndex")
+    onConfirmDeleteIndexChange(val: number) {
+        this.confirmDelete = val > -1;
     }
 
 
