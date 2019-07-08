@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/alterlog.io/js/about.cc9732e6.js"
   },
   {
-    "revision": "1b870646b61b506c77563d93455ecde6",
+    "revision": "9adbfd93055abd009e3a22ca4ed1c512",
     "url": "/alterlog.io/index.html"
   },
   {
