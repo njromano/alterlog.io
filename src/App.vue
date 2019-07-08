@@ -3,7 +3,7 @@
     <v-toolbar app>
       <v-toolbar-title class="headline">
         <v-layout align-center>
-          <img src="/img/icons/android-chrome-512x512.png" height="40" class="mr-2">
+          <img src="img/icons/android-chrome-512x512.png" height="40" class="mr-2">
           <span id="title">alter life tracker</span>
         </v-layout>
       </v-toolbar-title>
