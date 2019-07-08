@@ -8,15 +8,15 @@ self.__precacheManifest = [
     "url": "/alterlog.io/js/chunk-vendors.4087758c.js"
   },
   {
-    "revision": "f6a660d95a31a9040bad",
-    "url": "/alterlog.io/js/app.236df58c.js"
+    "revision": "633479960317d551aa98",
+    "url": "/alterlog.io/js/app.c8bdb1c9.js"
   },
   {
     "revision": "a6c8b916f9dafaf4535d",
     "url": "/alterlog.io/js/about.cc9732e6.js"
   },
   {
-    "revision": "29bc1d2a84620370fb8aed23ee49b8b5",
+    "revision": "1b870646b61b506c77563d93455ecde6",
     "url": "/alterlog.io/index.html"
   },
   {
@@ -28,7 +28,7 @@ self.__precacheManifest = [
     "url": "/alterlog.io/css/chunk-vendors.58c540d7.css"
   },
   {
-    "revision": "f6a660d95a31a9040bad",
+    "revision": "633479960317d551aa98",
     "url": "/alterlog.io/css/app.f2e9aa6b.css"
   }
 ];
