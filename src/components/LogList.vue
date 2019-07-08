@@ -2,28 +2,32 @@
   <v-container>
     <v-layout justify-center row wrap>
       <v-flex>
-        <v-card v-if="showNewCard" class="mb-3">
-          <v-card-title>
+        <v-card v-if="showNewCard" class="mb-3 white--text" color="primary">
+          <v-card-title class="white--text">
             <v-layout column>
               <h2 class="headline mb-0">New log</h2>
               <div>
                 <v-text-field v-model="newCard.title"
-                  placeholder="Title"></v-text-field>
+                  placeholder="Title" dark></v-text-field>
               </div>
               <div>
                 <v-textarea v-model="newCard.text"
                   placeholder="Text"
-                  rows="10"/>
+                  rows="10"
+                  dark/>
               </div>
               <div>
-                <v-btn color="primary" @click="onSaveBtn">
-                  Save
+                <v-btn color="secondary" @click="onSaveBtn">
+                  SAVE
+                </v-btn>
+                <v-btn color="white" @click="onSaveBtn">
+                  CANCEL
                 </v-btn>
               </div>
             </v-layout>
           </v-card-title>
         </v-card>
-        <v-card class="mb-3" v-for="card in cards" :key="card.Date">
+        <v-card class="mb-3" v-for="(card, index) in cards" :key="card.Date">
           <v-card-title primary-title>
             <v-layout justify-space-between>
               <h3 class="headline mb-0">{{ card.title }}</h3>
@@ -33,6 +37,11 @@
           <v-card-text>
             {{ card.text }}
           </v-card-text>
+          <v-card-actions>
+            <v-layout justify-end>
+              <v-icon small @click="onDeleteBtn(index)">delete</v-icon>
+            </v-layout>
+          </v-card-actions>
         </v-card>
       </v-flex>
     </v-layout>
@@ -43,7 +52,9 @@
       top
       right
       @click="onAddBtn">
-      <v-icon>add</v-icon></v-btn>
+        <v-icon v-if="showNewCard" dark>cancel</v-icon>
+        <v-icon v-else>add</v-icon>
+    </v-btn>
   </v-container>
 </template>
 
@@ -70,6 +81,11 @@
     showNewCard = false;
 
     onAddBtn() {
+      if (this.showNewCard) {
+        this.showNewCard = false;
+        return;
+      }
+
       this.newCard = new LogCard('', new Date(), '');
       this.showNewCard = true;
     }
@@ -78,8 +94,13 @@
       this.cards.push(this.newCard);
       store
         .setItem("logs", this.cards);
+      this.showNewCard = false;
     }
 
+    onDeleteBtn(index: number) {
+      this.cards.splice(index, 1);
+      store.setItem("logs", this.cards);
+    }
     created() {
       store
         .getItem("logs")
