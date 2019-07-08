@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/alterlog.io/robots.txt"
   },
   {
-    "revision": "6f3b77a5ae523a1ebd84",
-    "url": "/alterlog.io/js/chunk-vendors.d35fc950.js"
+    "revision": "318bd7c52e48b9c04a47",
+    "url": "/alterlog.io/js/chunk-vendors.4087758c.js"
   },
   {
-    "revision": "03a53ef8e850f16a4dfc",
-    "url": "/alterlog.io/js/app.90fcbb05.js"
+    "revision": "f40abd59e773c594b75a",
+    "url": "/alterlog.io/js/app.a0f35089.js"
   },
   {
     "revision": "a6c8b916f9dafaf4535d",
     "url": "/alterlog.io/js/about.cc9732e6.js"
   },
   {
-    "revision": "b8538df6a062714c912887636868c1ff",
+    "revision": "c6efb2d98565e6240a4103eac2dfddbb",
     "url": "/alterlog.io/index.html"
   },
   {
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/alterlog.io/img/logo.82b9c7a5.png"
   },
   {
-    "revision": "6f3b77a5ae523a1ebd84",
+    "revision": "318bd7c52e48b9c04a47",
     "url": "/alterlog.io/css/chunk-vendors.58c540d7.css"
   }
 ];
