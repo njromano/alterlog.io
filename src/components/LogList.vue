@@ -39,7 +39,7 @@
           </v-card-text>
           <v-card-actions>
             <v-layout justify-end>
-              <v-icon small @click="onDeleteBtn(index)">delete</v-icon>
+              <v-icon small @click.stop="confirmDeleteIndex = index">delete</v-icon>
             </v-layout>
           </v-card-actions>
         </v-card>
@@ -55,6 +55,18 @@
         <v-icon v-if="showNewCard" dark>cancel</v-icon>
         <v-icon v-else>add</v-icon>
     </v-btn>
+    <v-dialog v-model="showConfirmDeleteDialog"
+      width="500">
+      <v-card>
+        <v-card-text>Do you want to delete this log entry?</v-card-text>
+        <v-divider></v-divider>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn @click="confirmDeleteIndex = 0" flat color="primary">CANCEL</v-btn>
+          <v-btn @click="onDeleteBtn" flat color="primary">DELETE</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </v-container>
 </template>
 
@@ -79,6 +91,7 @@
     cards = new Array<LogCard>();
     newCard = new LogCard('', new Date(), '');
     showNewCard = false;
+    confirmDeleteIndex = -1;
 
     onAddBtn() {
       if (this.showNewCard) {
@@ -90,6 +103,10 @@
       this.showNewCard = true;
     }
 
+    get showConfirmDeleteDialog(): boolean {
+      return this.confirmDeleteIndex > -1;
+    }
+
     onSaveBtn() {
       this.cards.push(this.newCard);
       store
@@ -97,9 +114,10 @@
       this.showNewCard = false;
     }
 
-    onDeleteBtn(index: number) {
-      this.cards.splice(index, 1);
+    onDeleteBtn() {
+      this.cards.splice(this.confirmDeleteIndex, 1);
       store.setItem("logs", this.cards);
+      this.confirmDeleteIndex = -1;
     }
     created() {
       store
