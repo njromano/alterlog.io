@@ -8,15 +8,15 @@ self.__precacheManifest = [
     "url": "/alterlog.io/js/chunk-vendors.4087758c.js"
   },
   {
-    "revision": "f40abd59e773c594b75a",
-    "url": "/alterlog.io/js/app.a0f35089.js"
+    "revision": "45047d88fce3edf94887",
+    "url": "/alterlog.io/js/app.19f4ae72.js"
   },
   {
     "revision": "a6c8b916f9dafaf4535d",
     "url": "/alterlog.io/js/about.cc9732e6.js"
   },
   {
-    "revision": "c6efb2d98565e6240a4103eac2dfddbb",
+    "revision": "ab749581490ea5716cb121d944348f4f",
     "url": "/alterlog.io/index.html"
   },
   {
