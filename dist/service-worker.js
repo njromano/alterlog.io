@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/alterlog.io/precache-manifest.fcce52a97a0a34002955d0e18bb29d50.js"
+  "/alterlog.io/precache-manifest.99be28cc4a4b005cf507383e68bf9fd5.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "alterlog.io"});
