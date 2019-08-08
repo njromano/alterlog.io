@@ -34,12 +34,20 @@
               <div>{{ card.date.toLocaleString() }}</div>
             </v-layout>
           </v-card-title>
-          <v-card-text>
-            {{ card.text }}
+          <v-card-text v-if="index === editingIndex">
+            <v-text-field v-model="card.text"></v-text-field>
           </v-card-text>
+          <v-card-text v-else> {{ card.text }} </v-card-text>
           <v-card-actions>
+            <v-layout justify-start>
+              <v-icon @click.stop="editingIndex = index" v-if="index !== editingIndex">edit</v-icon>
+              <v-layout justify-start v-else>
+                <v-btn class="secondary" @click="onSave">save</v-btn>
+                <v-btn @click="onDiscard">discard</v-btn>
+              </v-layout>
+            </v-layout>
             <v-layout justify-end>
-              <v-icon small @click.stop="confirmDeleteIndex = index;">delete</v-icon>
+              <v-icon @click.stop="confirmDeleteIndex = index">delete</v-icon>
             </v-layout>
           </v-card-actions>
         </v-card>
@@ -93,6 +101,7 @@
     showNewCard = false;
     confirmDeleteIndex = -1;
     confirmDelete = false;
+    editingIndex = -1;
 
     onAddBtn() {
       if (this.showNewCard) {
@@ -138,6 +147,21 @@
         });
     }
 
+    onSave() {
+      store.setItem("logs", this.cards);
+      this.editingIndex = -1;
+    }
+
+    onDiscard() {
+      store
+              .getItem("logs")
+              .then(values => {
+                if (!values)
+                  return new Array<LogCard>();
+                this.cards = values as [LogCard];
+                this.editingIndex = -1;
+              });
+    }
   }
 </script>
 
