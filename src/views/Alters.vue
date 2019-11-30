@@ -61,6 +61,46 @@
                         name: 'name',
                         image: 'https://picsum.photos/100'
                     },
+                    {
+                        name: 'name',
+                        image: 'https://picsum.photos/100'
+                    },
+                    {
+                        name: 'name',
+                        image: 'https://picsum.photos/100'
+                    },
+                    {
+                        name: 'name',
+                        image: 'https://picsum.photos/100'
+                    },
+                    {
+                        name: 'name',
+                        image: 'https://picsum.photos/100'
+                    },
+                    {
+                        name: 'name',
+                        image: 'https://picsum.photos/100'
+                    },
+                    {
+                        name: 'name',
+                        image: 'https://picsum.photos/100'
+                    },
+                    {
+                        name: 'name',
+                        image: 'https://picsum.photos/100'
+                    },
+                    {
+                        name: 'name',
+                        image: 'https://picsum.photos/100'
+                    },
+                    {
+                        name: 'name',
+                        image: 'https://picsum.photos/100'
+                    },
+                    {
+                        name: 'name',
+                        image: 'https://picsum.photos/100'
+                    },
                 ]
             }
         }
@@ -70,9 +110,10 @@
 <style scoped>
     .alters {
         display: grid; /* 1 */
-        grid-template-columns: repeat(auto-fill, calc(100px + 2em)); /* 2 */
+        grid-template-columns: repeat(auto-fill, 100px); /* 2 */
         grid-gap: 1rem; /* 3 */
         justify-content: space-evenly; /* 4 */
+        margin: 2rem 0;
     }
 
     .alters::after {
@@ -84,7 +125,6 @@
         display: flex;
         flex-direction: column;
         text-align: center;
-        margin: 1em;
         justify-content: center;
     }
     .alter-card img {
