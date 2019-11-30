@@ -9,9 +9,26 @@
       </v-toolbar-title>
     </v-toolbar>
 
-    <v-content>
-      <LogList/>
+    <v-content class="mb-5">
+      <router-view></router-view>
     </v-content>
+
+    <v-bottom-nav
+      fixed
+      v-model="bottomNav">
+      <v-btn to="alters">
+        <span>Alters</span>
+        <v-icon>group</v-icon>
+      </v-btn>
+      <v-btn to="/">
+        <span>Home</span>
+        <v-icon>home</v-icon>
+      </v-btn>
+      <v-btn to="about">
+        <span>History</span>
+        <v-icon>history</v-icon>
+      </v-btn>
+    </v-bottom-nav>
   </v-app>
 </template>
 
@@ -25,7 +42,7 @@ export default {
   },
   data () {
     return {
-      //
+      bottomNav: 'alters'
     }
   }
 }
