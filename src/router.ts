@@ -28,6 +28,11 @@ export default new Router({
       path: '/alters',
       name: 'alters',
       component: () => import('./views/Alters.vue')
+    },
+    {
+      path: '/alter',
+      name: 'alter',
+      component: () => import('./views/Alter.vue')
     }
   ],
 });

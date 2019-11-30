@@ -1,8 +1,10 @@
 <template>
     <div class="alters">
         <div class="alter-card" v-for="a in alters">
-            <img :src="a.image">
-            <span>{{ a.name }}</span>
+            <router-link to="alter">
+                <img :src="a.image">
+                <span>{{ a.name }}</span>
+            </router-link>
         </div>
         <div class="alter-card">
             <v-icon>add</v-icon>
