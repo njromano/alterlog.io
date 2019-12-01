@@ -1,15 +1,21 @@
 <template>
     <div class="alters">
-        <div class="alter-card" v-for="a in alters">
-            <router-link to="alter">
-                <img :src="a.image">
-                <span>{{ a.name }}</span>
+        <div class="alter-card" v-for="(a, index) in alters">
+            <router-link :to="'alters/' + a.name">
+                <img :src="a.image + `?random=` + index">
+                <span class="alter-name">{{ a.name }}</span>
             </router-link>
         </div>
-        <div class="alter-card">
+        <v-btn to="/alters/new"
+               style="z-index: 10"
+               class="mb-5"
+               color="primary"
+               fixed
+               right
+               bottom
+               fab>
             <v-icon>add</v-icon>
-            <span>Add alter</span>
-        </div>
+        </v-btn>
     </div>
 </template>
 
@@ -131,5 +137,9 @@
     }
     .alter-card img {
         border-radius: 50%;
+    }
+
+    a {
+        text-decoration: none !important;
     }
 </style>

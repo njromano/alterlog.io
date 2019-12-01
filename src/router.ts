@@ -30,9 +30,14 @@ export default new Router({
       component: () => import('./views/Alters.vue')
     },
     {
-      path: '/alter',
+      path: '/alters/new',
+      name: 'alter-new',
+      component: () => import('./views/AlterNew.vue')
+    },
+    {
+      path: '/alters/:id',
       name: 'alter',
       component: () => import('./views/Alter.vue')
-    }
+    },
   ],
 });

@@ -16,7 +16,7 @@
     <v-bottom-nav
       fixed
       v-model="bottomNav">
-      <v-btn to="alters">
+      <v-btn to="/alters">
         <span>Alters</span>
         <v-icon>group</v-icon>
       </v-btn>
@@ -24,7 +24,7 @@
         <span>Home</span>
         <v-icon>home</v-icon>
       </v-btn>
-      <v-btn to="about">
+      <v-btn to="/about">
         <span>History</span>
         <v-icon>history</v-icon>
       </v-btn>
