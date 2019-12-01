@@ -2,7 +2,7 @@
     <div class="alters">
         <div class="alter-card" v-for="(a, index) in alters">
             <router-link :to="'alters/' + a.name">
-                <img :src="a.image + `?random=` + index">
+                <img :alt="a.name" :src="a.image + `?random=` + index">
                 <span class="alter-name">{{ a.name }}</span>
             </router-link>
         </div>
@@ -27,92 +27,92 @@
                 alters: [
                     {
                         name: 'name',
-                        image: 'https://picsum.photos/100'
+                        image: 'https://picsum.photos/100',
                     },
                     {
                         name: 'name',
-                        image: 'https://picsum.photos/100'
+                        image: 'https://picsum.photos/100',
                     },
                     {
                         name: 'name',
-                        image: 'https://picsum.photos/100'
+                        image: 'https://picsum.photos/100',
                     },
                     {
                         name: 'name',
-                        image: 'https://picsum.photos/100'
+                        image: 'https://picsum.photos/100',
                     },
                     {
                         name: 'name',
-                        image: 'https://picsum.photos/100'
+                        image: 'https://picsum.photos/100',
                     },
                     {
                         name: 'name',
-                        image: 'https://picsum.photos/100'
+                        image: 'https://picsum.photos/100',
                     },
                     {
                         name: 'name',
-                        image: 'https://picsum.photos/100'
+                        image: 'https://picsum.photos/100',
                     },
                     {
                         name: 'name',
-                        image: 'https://picsum.photos/100'
+                        image: 'https://picsum.photos/100',
                     },
                     {
                         name: 'name',
-                        image: 'https://picsum.photos/100'
+                        image: 'https://picsum.photos/100',
                     },
                     {
                         name: 'name',
-                        image: 'https://picsum.photos/100'
+                        image: 'https://picsum.photos/100',
                     },
                     {
                         name: 'name',
-                        image: 'https://picsum.photos/100'
+                        image: 'https://picsum.photos/100',
                     },
                     {
                         name: 'name',
-                        image: 'https://picsum.photos/100'
+                        image: 'https://picsum.photos/100',
                     },
                     {
                         name: 'name',
-                        image: 'https://picsum.photos/100'
+                        image: 'https://picsum.photos/100',
                     },
                     {
                         name: 'name',
-                        image: 'https://picsum.photos/100'
+                        image: 'https://picsum.photos/100',
                     },
                     {
                         name: 'name',
-                        image: 'https://picsum.photos/100'
+                        image: 'https://picsum.photos/100',
                     },
                     {
                         name: 'name',
-                        image: 'https://picsum.photos/100'
+                        image: 'https://picsum.photos/100',
                     },
                     {
                         name: 'name',
-                        image: 'https://picsum.photos/100'
+                        image: 'https://picsum.photos/100',
                     },
                     {
                         name: 'name',
-                        image: 'https://picsum.photos/100'
+                        image: 'https://picsum.photos/100',
                     },
                     {
                         name: 'name',
-                        image: 'https://picsum.photos/100'
+                        image: 'https://picsum.photos/100',
                     },
                     {
                         name: 'name',
-                        image: 'https://picsum.photos/100'
+                        image: 'https://picsum.photos/100',
                     },
                     {
                         name: 'name',
-                        image: 'https://picsum.photos/100'
+                        image: 'https://picsum.photos/100',
                     },
-                ]
-            }
-        }
-    }
+                ],
+            };
+        },
+    };
 </script>
 
 <style scoped>

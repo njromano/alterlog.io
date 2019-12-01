@@ -3,7 +3,7 @@
     <v-toolbar app>
       <v-toolbar-title class="headline">
         <v-layout align-center>
-          <img src="img/icons/android-chrome-512x512.png" height="40" class="mr-2">
+          <img alt="alter life tracker" src="img/icons/android-chrome-512x512.png" height="40" class="mr-2">
           <span id="title">alter life tracker</span>
         </v-layout>
       </v-toolbar-title>
@@ -33,23 +33,22 @@
 </template>
 
 <script>
-import LogList from './components/LogList'
+import LogList from './components/LogList';
 
 export default {
   name: 'App',
   components: {
-    LogList
+    LogList,
   },
-  data () {
+  data() {
     return {
-      bottomNav: 'alters'
-    }
-  }
-}
+      bottomNav: 'alters',
+    };
+  },
+};
 </script>
 
-<stlyle lang="stylus">
+<style lang="stylus">
   #title
     font-family: 'Leckerli One', cursive;
-
-</stlyle>
+</style>

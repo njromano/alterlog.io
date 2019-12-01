@@ -22,22 +22,22 @@ export default new Router({
     {
       path: '/log',
       name: 'log',
-      component: () => import('./components/LogList.vue')
+      component: () => import('./components/LogList.vue'),
     },
     {
       path: '/alters',
       name: 'alters',
-      component: () => import('./views/Alters.vue')
+      component: () => import('./views/Alters.vue'),
     },
     {
       path: '/alters/new',
       name: 'alter-new',
-      component: () => import('./views/AlterNew.vue')
+      component: () => import('./views/AlterNew.vue'),
     },
     {
       path: '/alters/:id',
       name: 'alter',
-      component: () => import('./views/Alter.vue')
+      component: () => import('./views/Alter.vue'),
     },
   ],
 });

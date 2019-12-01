@@ -2,7 +2,7 @@
     <div class="alter-new">
         <h1>New Alter</h1>
         <div class="add-image">
-            <img src="https://picsum.photos/200?blur">
+            <img alt="new image" src="https://picsum.photos/200?blur">
             <v-icon color="white">camera_alt</v-icon>
         </div>
         <div class="alter-form">
@@ -27,8 +27,8 @@
 
 <script>
     export default {
-        name: "AlterNew"
-    }
+        name: "AlterNew",
+    };
 </script>
 
 <style scoped>

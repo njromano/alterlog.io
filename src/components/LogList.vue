@@ -81,29 +81,18 @@
 <script lang="ts">
   import {Vue, Component, Watch} from "vue-property-decorator";
   import store from 'localforage';
-
-  class LogCard {
-    title: string;
-    date: Date;
-    text: string;
-    constructor(title: string, date: Date, text: string)
-    {
-      this.title = title;
-      this.date = date;
-      this.text = text;
-    }
-  }
+  import LogCard from './LogCard';
 
   @Component
   export default class Home extends Vue {
-    cards = new Array<LogCard>();
-    newCard = new LogCard('', new Date(), '');
-    showNewCard = false;
-    confirmDeleteIndex = -1;
-    confirmDelete = false;
-    editingIndex = -1;
+    protected cards = new Array<LogCard>();
+    private newCard = new LogCard('', new Date(), '');
+    private showNewCard = false;
+    private confirmDeleteIndex = -1;
+    private confirmDelete = false;
+    private editingIndex = -1;
 
-    onAddBtn() {
+    public onAddBtn() {
       if (this.showNewCard) {
         this.showNewCard = false;
         return;
@@ -114,50 +103,53 @@
     }
 
     @Watch("confirmDelete")
-    onConfirmDeleteChange(val: boolean) {
-      if (!val)
+    public onConfirmDeleteChange(val: boolean) {
+      if (!val) {
         this.confirmDeleteIndex = -1;
+      }
     }
 
     @Watch("confirmDeleteIndex")
-    onConfirmDeleteIndexChange(val: number) {
+    public onConfirmDeleteIndexChange(val: number) {
         this.confirmDelete = val > -1;
     }
 
 
-    onSaveBtn() {
+    public onSaveBtn() {
       this.cards.push(this.newCard);
       store
         .setItem("logs", this.cards);
       this.showNewCard = false;
     }
 
-    onDeleteBtn() {
+    public onDeleteBtn() {
       this.cards.splice(this.confirmDeleteIndex, 1);
       store.setItem("logs", this.cards);
       this.confirmDeleteIndex = -1;
     }
-    created() {
+    public created() {
       store
         .getItem("logs")
         .then((values) => {
-          if (!values)
+          if (!values) {
             return new Array<LogCard>();
-          this.cards = values as [LogCard]
+          }
+          this.cards = values as [LogCard];
         });
     }
 
-    onSave() {
+    public onSave() {
       store.setItem("logs", this.cards);
       this.editingIndex = -1;
     }
 
-    onDiscard() {
+    public onDiscard() {
       store
               .getItem("logs")
-              .then(values => {
-                if (!values)
+              .then((values) => {
+                if (!values) {
                   return new Array<LogCard>();
+                }
                 this.cards = values as [LogCard];
                 this.editingIndex = -1;
               });
