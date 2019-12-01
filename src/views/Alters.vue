@@ -2,7 +2,7 @@
     <div class="alters">
         <div class="alter-card" v-for="(a, index) in alters">
             <router-link :to="'alters/' + a.name">
-                <img :alt="a.name" :src="a.image + `?random=` + index">
+                <img :alt="a.name" :src="a.image + `?random=` + index" class="elevation-10">
                 <span class="alter-name">{{ a.name }}</span>
             </router-link>
         </div>

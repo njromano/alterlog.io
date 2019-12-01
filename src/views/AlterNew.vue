@@ -2,7 +2,7 @@
     <div class="alter-new">
         <h1>New Alter</h1>
         <div class="add-image">
-            <img alt="new image" src="https://picsum.photos/200?blur">
+            <img alt="new image" src="https://picsum.photos/200?blur" class="elevation-10">
             <v-icon color="white">camera_alt</v-icon>
         </div>
         <div class="alter-form">
@@ -41,7 +41,6 @@
 
     img {
         border-radius: 50%;
-        padding: 1rem;
     }
 
     .alter-form {
